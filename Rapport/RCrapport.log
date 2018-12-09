@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.8)  9 DEC 2018 19:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.8)  9 DEC 2018 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1295,22 +1295,21 @@ Chapter 2.
 
 ] [5] (./RCrapport.aux) ) 
 Here is how much of TeX's memory you used:
- 24752 strings out of 494830
- 475556 string characters out of 6178379
+ 24768 strings out of 494830
+ 475711 string characters out of 6178379
  560600 words of memory out of 5000000
- 27714 multiletter control sequences out of 15000+600000
- 533353 words of font info for 32 fonts, out of 8000000 for 9000
+ 27722 multiletter control sequences out of 15000+600000
+ 536158 words of font info for 42 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  63i,7n,67p,10417b,606s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
-
-Output written on RCrapport.pdf (5 pages, 49008 bytes).
+2.pfb>
+Output written on RCrapport.pdf (5 pages, 46444 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
