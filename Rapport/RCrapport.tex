@@ -85,12 +85,12 @@
 	d'observations, parmis elles 
 	\chapter{Réalisation}
 	\section{Les outils utilisés}
-	\subsection{Matlabn-PNT}
+	\subsection{Matlab-PNT}
 	\paragraph{}
 	Pour ce qui est de la représentation graphique, nous disposons d'un très bon outil, la PNT sous Matlab, nous pouvons donc l'utiliser pour concevoir nos réseaux, et appliquer des algorithme de propagation(basé sur le min par exemple), principalement, nous allons l'utiliser pour la comparaison entre des graphes avec peu(beaucoup) de noeud-connections
 	et son équivalent en base possibiliste, pour faire la conversion l'outil Cygwin est nécessaire.
 	\subsection{Cygwin}
-	 Il faut savoir que pour transoformer un graphe possibiliste en une base possibiliste, nous devons tout d'abord effectuer une conversion des relations entre les noeuds dans le modèle graphique en formules logique pondérées dans la base possibiliste.
+	 Il faut savoir que pour transformer un graphe possibiliste en une base possibiliste, nous devons tout d'abord effectuer une conversion des relations entre les noeuds dans le modèle graphique en formules logique pondérées dans la base possibiliste.
 	 \par 
 	 Pour ce faire nous avons a disposition un algorithme de transformation ainsi qu'un solveur max-sat qui tournent sous un environnement Unix, d'où l'utilisation de l'outil Cygwin qui permet de simuler un tel environnemt dans Windows.
 	 
@@ -101,9 +101,9 @@
 	
 	\section{Réglage automatique des paramètres}
 	\subsection{Jeu de test}
-	Différentes valeurs pour nb-node et different nb-parent-max ont été testées par le biais de notre mini script \textbf{test\_any.m}, le but est à chaque fois de fixer le nombre de parent, et faire varier le nombre de noeud, de ce fait nous jouons sur la nature(nb-parent < 2 donc poly-arbre) et la densité (nbr-parent>2 donc multi-connecté) du réseau, et à chaque fois nous récupérons le temps de propagation (éventuellement après construction de l'arbre de jonction dans le cas du multi-connecté), nous passons ensuite à l'exécution du converteur \textbf{passage.exe}, qui construit la base possibiliste correspondant au réseau généré ultérieurement.
+	Différentes valeurs pour nb-node et diffèrent nb-parent-max ont été testées par le biais de notre mini script \textbf{test\_any.m}, le but est à chaque fois de fixer le nombre de parent, et faire varier le nombre de noeud, de ce fait nous jouons sur la nature(nb-parent < 2 donc poly-arbre) et la densité (nbr-parent>2 donc multi-connecté) du réseau, et à chaque fois nous récupérons le temps de propagation (éventuellement après construction de l'arbre de jonction dans le cas du multi-connecté), nous passons ensuite à l'exécution du convertisseur \textbf{passage.exe}, qui construit la base possibiliste correspondant au réseau généré ultérieurement.
 	\subsection{Résultats}
-	Pour résumer le travail effecuté, nous avons dressé ces tableaux comparaitfs, en fonction des nombres de parents max et du nombre de noeuds, comme demandé, nous avons réalisé les teste sur les 4 catégories suivantes : 
+	Pour résumer le travail effectué, nous avons dressé ces tableaux comparatifs, en fonction des nombres de parents max et du nombre de noeuds, comme demandé, nous avons réalisé les teste sur les 4 catégories suivantes : 
 	\subsubsection{Poly-arbre}
 	Pour s'assurer de la génération d'un poly-arbre, nous avons fixé le nombre maximum de parent à 1, nous avons ensuite fait varier le nombre de noeuds dans le réseau. Voici les résultats obtenues : 
 	%POLYTREE
@@ -146,7 +146,7 @@
 	
 	\subsubsection{Réseau faiblement multi-connecté}
 	\paragraph{}
-	Dans ce cas, nous considérons le cas d'un graphe multi-connécté, par conséquent, le passage par la construction de l'arbre de jonction
+	Dans ce cas, nous considérons le cas d'un graphe multi-connecté, par conséquent, le passage par la construction de l'arbre de jonction
 	est nécessaire, cela ralentit consédérablement le temps d'exécution, mais ne devrait pas influencer
 	sur le temps de propagation, ce temps dépend surtout de la talle du réseau, les résultats obtenus sont les suivants :
 
@@ -173,7 +173,7 @@
 
 	\paragraph{Commentaires}
 	On peut remarquer que pour un nombre de noeud petit, le temps de propagation reste très rapide, et cela même comparé au
-	temps d'inférence, mais dès qu'on commence à augmenter ce nombre de neoud, une nette amélioration peut être ressentie, elle
+	temps d'inférence, mais dès qu'on commence à augmenter ce nombre de noeud, une nette amélioration peut être ressentie, elle
 	reste encore très peu notable, le passage vers la catégorie suivante pourrait nous donner plus de détails.
 
 
@@ -205,9 +205,9 @@
 
 	\paragraph{Commentaires}
 	Ici nous pouvons finalement apprécier la puissance de l'algorithme d'inférence, en effet pour une grand nombre de noeud,
-	et une densité dans la distribution des relations entre noeud (40 neouds, 8 parents) le temps de propagation dépasse les 
+	et une densité dans la distribution des relations entre noeud (40 noeuds, 8 parents) le temps de propagation dépasse les 
 	10 secondes(sans compter le temps de construction de l'arbre de jonction), alors que le passage vers la base possibiliste
-	et le lancement de l'inférence se fait dans un temps très raisonable. C'est ainsi un premier indicateur que la représentation
+	et le lancement de l'inférence se fait dans un temps très raisonnable. C'est ainsi un premier indicateur que la représentation
 	graphique peut avoir des limite comme nous l'avons anticipé.
 
 	\subsubsection{Réseau fortement multi-connecté}
@@ -240,7 +240,7 @@
 
 	\paragraph{Commentaires}
 	Comme anticipé, la propagation graphique montre de grande lacunes, entre le long temps de construction et propagation pour un 
-	nombre de neoud égale à 32, et la saturation de la mémoire pour ce même nombre égale à 40, et la vitesse quasi-instantannée 
+	nombre de noeud égale à 32, et la saturation de la mémoire pour ce même nombre égale à 40, et la vitesse quasi-instantanée 
 	d'influencer logique, le choix est vite fait.
 
 	\chapter{Conclusion}
@@ -252,9 +252,9 @@
 	entre elles) les deux technique de calculs du degré de possibilité se valent, avec un bonus pour l'inférence logique du point
 	de vue régularité(temps de réponses stable). En revanche dans les cas complexes, du moins ceux que nous avons étudié, l'inférence
 	à de grand avantages par rapport à son homologue graphique, plusieurs raisons peuvent être données comme la complexité 
-	temporelle théorique (Complexité exponentielle contre Complexité logairithmique).
+	temporelle théorique (Complexité exponentielle contre Complexité logarithmique).
 	\par 
-	En revanche nous n'avons pas pu effectuer d'autre testes plus poussé pour connaitre les limites de l'inférence logique, de ce 
+	En revanche nous n'avons pas pu effectuer d'autre testes plus poussé pour connaître les limites de l'inférence logique, de ce 
 	fait décider de quelle méthode est préférable à une autre serait trop prématuré, mais dans les cas que nous avons vu jusqu'à 
 	maintenant, l'inférence remporte le match haut la main.
 
