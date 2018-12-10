@@ -134,7 +134,13 @@
     46                    & 1                      & 0.13534                       & 0.05742                       & 0.03125                    \\ \hline
     \end{tabular}%
     }
-    \end{table}
+	\end{table}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{sheets/poly.png}
+	\end{figure}
+
     \paragraph{Commentaires}:
     Comme nous pouvions nous y attendre, le cas du polygraphe est aisément simple à traiter, surtout que la phase de construction de l'arbre de jonction n'est pas nécessaire, ce qui explique la rapidité de la propagation, l'inférence logique est aussi très performante, mais puisque c'est un exemple simple d'un polyarbre nous ne pouvons pas conclure sur la performance des deux, quoique qu'on peut observer une augmentation quasi-linéaire pour la propagation contre une stabilité de l'inférence.
 	
@@ -160,6 +166,10 @@
 	}
 	\end{table}
 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{sheets/weakly.png}
+	\end{figure}
 
 	\paragraph{Commentaires}
 	On peut remarquer que pour un nombre de noeud petit, le temps de propagation reste très rapide, et cela même comparé au
@@ -187,6 +197,11 @@
 	\end{tabular}%
 	}
 	\end{table}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{sheets/medium.png}
+	\end{figure}
 
 	\paragraph{Commentaires}
 	Ici nous pouvons finalement apprécier la puissance de l'algorithme d'inférence, en effet pour une grand nombre de noeud,
@@ -218,6 +233,10 @@
 	}
 	\end{table}
 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{sheets/strongly.png}
+	\end{figure}
 
 	\paragraph{Commentaires}
 	Comme anticipé, la propagation graphique montre de grande lacunes, entre le long temps de construction et propagation pour un 
