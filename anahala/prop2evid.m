@@ -1,6 +1,7 @@
-fid1=fopen('C:\cygwin64\home\licence\graphe.m','w+');
-fid2=fopen('C:\cygwin64\home\licence\ki.m','w+');
-fid3=fopen('C:\cygwin64\home\licence\nombreki.m','w+');
+function [BEL_Cdt_classique,t2] = prop2evid(nb_nodes,nb_parent_max)
+fid1=fopen('C:\cygwin\home\licence\graphe.m','w');
+fid2=fopen('C:\cygwin\home\licence\ki.m','w');
+fid3=fopen('C:\cygwin\home\licence\nombreki.m','w');
 total_nb_links=0;
 Ce=0;
 tot1=0;nbki=0;temoin=0;
@@ -8,8 +9,8 @@ totj=0;
 nbclauses=0; nbr=0;
 node_save=[];
 %paramétrage du réseau
-nb_nodes=10;
-nb_parent_max=3;
+%nb_nodes=10;
+%nb_parent_max=3;
 %initialisation du réseau
 dag = zeros(nb_nodes,nb_nodes);
 
@@ -199,4 +200,4 @@ end
 end
 Ce
 fclose('all');
-
+end
